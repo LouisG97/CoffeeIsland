@@ -1,0 +1,3 @@
+depth = - bbox_bottom;
+text_id = "";
+touched = false;
