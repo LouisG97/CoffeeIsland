@@ -1,4 +1,4 @@
-time_before_fading = 1;
+time_before_fading = .5;
 countdown = time_before_fading;
 	
 image_alpha = 0.00;

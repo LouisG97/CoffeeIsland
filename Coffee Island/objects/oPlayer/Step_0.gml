@@ -169,7 +169,6 @@ if accionar == true || accionar2 == true || accionar3 == true || accionar4 == tr
 		if sprite[2] == cole{
 			impediment = true;
 			xspd = 0;
-			yspd = 0;
 			if image_index >15.5{	
 				sprite[2] = idL;
 				sprite[1] = idD;
@@ -281,6 +280,27 @@ if impediment = false{
 	
 }else {
 	
+		
+		///Gravity
+		yspd += grav;
+	
+		///Cap falling speed 
+		if yspd > termVel {yspd =  termVel;};
+		
+		var _subPixel  = .5;
+		if place_meeting(x, y+yspd, oWall)
+		{
+			var _pixelCheck = _subPixel * sign(yspd);
+			while !place_meeting(x, y + _pixelCheck, oWall)
+			{
+				y += _pixelCheck
+			}
+		
+			///Set yspd to 0  to collide
+			yspd = 0;
+		}
+		///Move
+		y += yspd;
 }
 	
 

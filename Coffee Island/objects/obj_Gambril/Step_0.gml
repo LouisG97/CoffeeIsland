@@ -17,9 +17,13 @@ if oPlayer.x+25 >= x &&  oPlayer.x <= x+25 {
 	
 }
 
-if oPlayer.x+25 >= x &&  oPlayer.x <= x+25 && keyboard_check_pressed((ord("Z")))==true && _d == false
+if oPlayer.x+25 >= x && oPlayer.impediment == false &&  oPlayer.x <= x+25 && keyboard_check_pressed((ord("Z")))==true && _d == false
 	{
+		show_debug_message(string(oPlayer.sprite_index))
+		
+		oPlayer.xspd = 0;
 		create_textbox(_s.text_id);
+		
 	}
  
  if obj_daytime.time == "Day"{

@@ -225,13 +225,16 @@ if test == true{
 	
 }
 
+if activated = true{
 
-if InvKeyPressed{
+	if InvKeyPressed{
 	
-	if open == false{open = true;}
-	else if open == true{open = false;};
+		if open == false{open = true; obj_options.open = false; obj_options.selected_y = 0;}
+		else if open == true{open = false;};
 	
-}
+	}
+	
+}else{};
 
 if InvKeyA && open == true{
 	

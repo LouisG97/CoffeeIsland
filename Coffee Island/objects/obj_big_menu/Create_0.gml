@@ -1,4 +1,4 @@
-activated = true;
+activated = false;
 
 selection = 0;
 

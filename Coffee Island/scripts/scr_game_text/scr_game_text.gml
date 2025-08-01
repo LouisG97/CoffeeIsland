@@ -334,6 +334,9 @@ function scr_game_text_eng(_text_id){
 			scr_text("I was wondering when you would arrive...", "gambril", -1);
 			scr_text("My name is Gambril, by the way", "gambril", -1);
 			scr_text("You are...", "gambril", -1);
+			global.mission[0] = true;
+			//global.mission[1] = true;
+			global.mission[2] = true;
 		break;
 		
 		case "coffee":

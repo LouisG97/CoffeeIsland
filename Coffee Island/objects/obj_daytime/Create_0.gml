@@ -1,3 +1,5 @@
+activated = true;
+
 t_min = 4;
 t_sec = 30;
 t_mill = 0;
