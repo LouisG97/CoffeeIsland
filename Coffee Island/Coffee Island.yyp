@@ -86,6 +86,7 @@
     {"id":{"name":"obj_hints4","path":"objects/obj_hints4/obj_hints4.yy",},},
     {"id":{"name":"obj_hints5","path":"objects/obj_hints5/obj_hints5.yy",},},
     {"id":{"name":"obj_hints6","path":"objects/obj_hints6/obj_hints6.yy",},},
+    {"id":{"name":"obj_mission_status","path":"objects/obj_mission_status/obj_mission_status.yy",},},
     {"id":{"name":"obj_noti","path":"objects/obj_noti/obj_noti.yy",},},
     {"id":{"name":"obj_notif","path":"objects/obj_notif/obj_notif.yy",},},
     {"id":{"name":"obj_options","path":"objects/obj_options/obj_options.yy",},},

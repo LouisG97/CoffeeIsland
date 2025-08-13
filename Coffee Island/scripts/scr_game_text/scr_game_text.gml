@@ -4,12 +4,17 @@ global.action = false;
 global.notif = 0;
 global.coffe_cherries = 0;
 global.coffe_seeds = 0;
-global.coffe_seeds_light = 0;
-global.coffe_seeds_medium = 0;
-global.coffe_seeds_high = 0;
 global.coffe_collect = 0;
 global.coffe_decollect = 0;
 global.toaster_type = 0;
+//Characters stage
+global.gambril = 0;
+//Character stats
+global.money = 0;
+//Toasted seeds
+global.coffe_seeds_light = 0;
+global.coffe_seeds_medium = 0;
+global.coffe_seeds_high = 0;
 ///Grinded coffee
 global.grind_selection = 0;
 global.grind_type = 0;
@@ -330,13 +335,37 @@ function scr_game_text_eng(_text_id){
 	///FIRST SCENARIO
 	
 		case "gambril-init":
-			scr_text("Hello, boy", "gambril", -1);
-			scr_text("I was wondering when you would arrive...", "gambril", -1);
-			scr_text("My name is Gambril, by the way", "gambril", -1);
-			scr_text("You are...", "gambril", -1);
-			global.mission[0] = true;
-			//global.mission[1] = true;
-			global.mission[2] = true;
+		
+			if global.gambril == 0 {
+				scr_text("Hello, boy", "gambril", -1);
+				scr_text("I was wondering when you would arrive...", "gambril", -1);
+				scr_text("My name is Gambril, by the way", "gambril", -1);
+				scr_text("Here, your first 4 missions", "gambril", -1);
+				scr_text("Press the key 'I' if you want to open the menu, there you can check the details of the missions...", "gambril", -1);
+				global.mission[0] = true;
+				global.mission[1] = true;
+				global.mission[2] = true;
+				global.mission[3] = true;
+				global.gambril = 1;
+			} else if global.gambril == 1{
+				
+				if global.mission_stage[0] == 6 && global.espresso > 0 {
+					
+					obj_mission_status.mission_0_delivered = true;
+					scr_text("Hey! Thank you, pal!", "gambril", -1);
+					scr_text("Take this $50 as reward for your work...", "gambril", -1);
+					global.gambril = 2;
+					
+				}
+				else{
+					scr_text("You can press the key 'I' if you want to open the menu, there you can check the details of the missions...", "gambril", -1);
+				}
+				
+			}else if global.gambril == 2{
+				
+					scr_text("You can press the key 'I' if you want to open the menu, there you can check the details of the missions...", "gambril", -1);
+				
+			}
 		break;
 		
 		case "coffee":

@@ -63,6 +63,7 @@
     {"name":"obj_hints4","order":3,"path":"objects/obj_hints4/obj_hints4.yy",},
     {"name":"obj_hints5","order":4,"path":"objects/obj_hints5/obj_hints5.yy",},
     {"name":"obj_hints6","order":5,"path":"objects/obj_hints6/obj_hints6.yy",},
+    {"name":"obj_mission_status","order":19,"path":"objects/obj_mission_status/obj_mission_status.yy",},
     {"name":"obj_noti","order":10,"path":"objects/obj_noti/obj_noti.yy",},
     {"name":"obj_notif","order":9,"path":"objects/obj_notif/obj_notif.yy",},
     {"name":"obj_options","order":17,"path":"objects/obj_options/obj_options.yy",},

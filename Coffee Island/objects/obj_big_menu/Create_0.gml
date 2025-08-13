@@ -1,4 +1,7 @@
 activated = false;
+level = 1;
+no_level = true;
+move = 0;
 
 selection = 0;
 
@@ -42,3 +45,11 @@ dri8 = 0;
 
 page = 1;
 selected_y = 0;
+
+//intializate missions
+init = 0;
+
+//showed mission
+show[0] = false;
+missions_active = [];
+mission_index = 0;
