@@ -349,21 +349,39 @@ function scr_game_text_eng(_text_id){
 				global.gambril = 1;
 			} else if global.gambril == 1{
 				
-				if global.mission_stage[0] == 6 && global.espresso > 0 {
+				if global.mission_stage[0] == 6 && global.espresso > 0 && global.mission[0] == true{
 					
 					obj_mission_status.mission_0_delivered = true;
 					scr_text("Hey! Thank you, pal!", "gambril", -1);
 					scr_text("Take this $50 as reward for your work...", "gambril", -1);
-					global.gambril = 2;
+					global.espresso --;
+					
+				}else if global.mission_stage[1] == 2 && global.intense_espresso > 0 && global.mission[1] == true{
+					
+					obj_mission_status.mission_1_delivered = true;
+					scr_text("Hey! Thank you, pal! This is a fantastic intense espresso!", "gambril", -1);
+					scr_text("Take this $50 as reward for your work...", "gambril", -1);
+					global.intense_espresso --;
+					
+				}else if global.mission_stage[2] == 3 && global.cappuccino > 0 && global.mission[2] == true{
+					
+					obj_mission_status.mission_2_delivered = true;
+					scr_text("Hey! Thank you, pal! This is a great cappuccino!", "gambril", -1);
+					scr_text("Take this $20 as reward for your work...", "gambril", -1);
+					global.cappuccino --;
+					
+				}
+				else if global.mission_stage[3] == 3 && global.latte > 0 && global.mission[3] == true{
+					
+					obj_mission_status.mission_3_delivered = true;
+					scr_text("Hey! Thank you, pal! This is a very nice latte!", "gambril", -1);
+					scr_text("Take this $20 as reward for your work...", "gambril", -1);
+					global.latte --;
 					
 				}
 				else{
 					scr_text("You can press the key 'I' if you want to open the menu, there you can check the details of the missions...", "gambril", -1);
 				}
-				
-			}else if global.gambril == 2{
-				
-					scr_text("You can press the key 'I' if you want to open the menu, there you can check the details of the missions...", "gambril", -1);
 				
 			}
 		break;

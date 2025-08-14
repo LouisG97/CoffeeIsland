@@ -14,3 +14,20 @@ mission_0_toasted_seeds = 0;
 mission_0_grinded_seeds = 0;
 mission_0_espresso = 0;
 mission_0_delivered = false;
+
+//Mission 1
+mission_1 = false;
+mission_1_intense_espresso = 0;
+mission_1_delivered = false;
+
+//Mission 2
+mission_2 = false;
+mission_2_espresso = 0;
+mission_2_cappuccino = 0;
+mission_2_delivered = false;
+
+//Mission 3
+mission_3 = false;
+mission_3_espresso = 0;
+mission_3_latte = 0;
+mission_3_delivered = false;

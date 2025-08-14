@@ -1,8 +1,8 @@
 getControls()
 
 if global.money <10 { espa = 0;}
-else if global.money >= 10 { espa = .2; }
-else if global.money >= 100 {espa = .4;};
+else if global.money >= 10 && global.money < 100{ espa = .2; }
+else if global.money >= 100 {espa = .425;}
 
 if activated == true{
 

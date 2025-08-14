@@ -1,5 +1,5 @@
 
-
+//Mission 0
 
 if global.mission[0] == true {
 	//show_debug_message("Mission status: "+string(mission_0));
@@ -65,6 +65,130 @@ if global.mission[0] == true {
 				global.mission[0] = false;
 				global.mission_visible[0] = false;
 				global.money = global.money + 50;
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+//Mission 1
+if global.mission[1] == true {
+	
+	if mission_1 == false{
+		
+		mission_1 = true;
+		mission_1_intense_espresso = global.intense_espresso;
+		
+	}
+	if mission_1 == true{
+		
+		if global.mission_stage[1] == 1{
+			
+			if global.intense_espresso> mission_1_intense_espresso {
+				
+				global.mission_stage[1] = 2;
+				
+			}
+			
+		}else if global.mission_stage[1] == 2{
+			
+			if mission_1_delivered == true {
+				
+				global.mission[1] = false;
+				global.mission_visible[1] = false;
+				global.money = global.money + 50;
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+//Mission 2
+if global.mission[2] == true {
+	
+	if mission_2 == false{
+		
+		mission_2 = true;
+		mission_2_espresso = global.espresso;
+		
+	}
+	if mission_2 == true{
+		
+		if global.mission_stage[2] == 1{
+			
+			if global.espresso> mission_2_espresso {
+				
+				global.mission_stage[2] = 2;
+				mission_2_cappuccino = global.cappuccino;
+				
+			}
+			
+		}else if global.mission_stage[2] == 2{
+			
+			if global.cappuccino > mission_2_cappuccino{
+				
+				global.mission_stage[2] = 3;
+				
+			}
+			
+		}else if global.mission_stage[2] == 3{
+			
+			if mission_2_delivered == true {
+				
+				global.mission[2] = false;
+				global.mission_visible[2] = false;
+				global.money = global.money + 20;
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+//Mission 3
+if global.mission[3] == true {
+	
+	if mission_3 == false{
+		
+		mission_3 = true;
+		mission_3_espresso = global.espresso;
+		
+	}
+	if mission_3 == true{
+		
+		if global.mission_stage[3] == 1{
+			
+			if global.espresso> mission_3_espresso {
+				
+				global.mission_stage[3] = 2;
+				mission_3_latte = global.latte;
+				
+			}
+			
+		}else if global.mission_stage[3] == 2{
+			
+			if global.latte > mission_3_latte{
+				
+				global.mission_stage[3] = 3;
+				
+			}
+			
+		}else if global.mission_stage[3] == 3{
+			
+			if mission_3_delivered == true {
+				
+				global.mission[3] = false;
+				global.mission_visible[3] = false;
+				global.money = global.money + 20;
 				
 			}
 			

@@ -35,7 +35,9 @@ global.mission_visible[3] = false;
 //Stage of mission
 
 global.mission_stage[0] = 1;
-
+global.mission_stage[1] = 1;
+global.mission_stage[2] = 1;
+global.mission_stage[3] = 1;
 
 function getMissions(textbox_x,textbox_y){
 	
@@ -142,7 +144,7 @@ function getMissions(textbox_x,textbox_y){
 	c = 0;
 	for(a = 0; a <= 3; a++){
 		
-		show_debug_message("C"+string(a)+": "+string(c));
+		//show_debug_message("C"+string(a)+": "+string(c));
 	
 		if global.mission_visible[a] == true { c = c + 18};
 		
@@ -224,11 +226,11 @@ function getMissionDetails(mission_index,textbox_x,textbox_y){
 	wi3 = .85;
 	hi3 = .85;
 	
-	
+	//Mission 0
 	
 	if mission_index == 0 {
 		
-		show_debug_message("Llegamos aqui a revisar");
+		//show_debug_message("Llegamos aqui a revisar");
 		
 		mission_name = "Make me an espresso!";
 		mission_r = "Rewards";
@@ -274,6 +276,88 @@ function getMissionDetails(mission_index,textbox_x,textbox_y){
 		mission_rewards = "50 Gold";
 		
 		
+	}
+	
+	//Mission 1
+	
+	if mission_index == 1 {
+		
+		
+		mission_name = "Make me an intense espresso!";
+		mission_r = "Rewards";
+		
+		if global.mission_stage[1] == 1{
+			mission_part = "Part 1 of 2:";
+			
+			mission_details = "Use the espresso machine to prepare an intense espresso, this time you will have to high toast the coffee seeds, unlike the regular espresso";
+			
+		}else if global.mission_stage[1] == 2 {
+			
+			mission_part = "Part 2 of 2:";
+			
+			mission_details = "Deliver the intense espresso to Gambril";
+			
+		}
+		
+		mission_rewards = "50 Gold";
+	}
+	
+	//Mission 2
+	if mission_index == 2 {
+		
+		
+		mission_name = "Make me a cappuccino!";
+		mission_r = "Rewards";
+		
+		if global.mission_stage[2] == 1{
+			mission_part = "Part 1 of 3:";
+			
+			mission_details = "Prepare a regular espresso";
+			
+		}else if global.mission_stage[2] == 2 {
+			
+			mission_part = "Part 2 of 3:";
+			
+			mission_details = "Use the espresso machine to create a cappucino in the 'milk based' drinks";
+			
+		}else if global.mission_stage[2] == 3 {
+			
+			mission_part = "Part 3 of 3:";
+			
+			mission_details = "Deliver the Capuccino to Gambril";
+			
+		}
+		
+		mission_rewards = "20 Gold";
+	}
+	
+	//Mission 3
+	if mission_index == 3 {
+		
+		
+		mission_name = "Make me a latte!";
+		mission_r = "Rewards";
+		
+		if global.mission_stage[3] == 1{
+			mission_part = "Part 1 of 3:";
+			
+			mission_details = "Prepare a regular espresso";
+			
+		}else if global.mission_stage[3] == 2 {
+			
+			mission_part = "Part 2 of 3:";
+			
+			mission_details = "Use the espresso machine to create a latte in the 'milk based' drinks";
+			
+		}else if global.mission_stage[3] == 3 {
+			
+			mission_part = "Part 3 of 3:";
+			
+			mission_details = "Deliver the Latte to Gambril";
+			
+		}
+		
+		mission_rewards = "20 Gold";
 	}
 	
 	//Mission Name

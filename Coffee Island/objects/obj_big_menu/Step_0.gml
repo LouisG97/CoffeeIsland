@@ -85,11 +85,29 @@ if activated = false{
 				z = 0;
 				last = 0;
 				act = 0;
+				num_act = 0;
+				
+				for (a = 0; a<array_length(global.mission); a++){
+						
+					if global.mission[a] == true { num_act ++;};
+						
+				}
 			
 				
 			
-				if move == 0 {move = 1;level = level + 1;}
-				else if move == 1 {move = 2;level = level + 1;}
+				if move == 0 {
+					
+					move = 1;
+					if num_act > 1 {level = level + 1;move = 1;}
+					
+					
+				}
+				else if move == 1 {
+					
+					
+					if num_act > 2 {level = level + 1;move = 2;}
+					
+				}
 				else if move == 2 {
 					
 					for (a = 0; a<array_length(global.mission); a++){
@@ -187,7 +205,7 @@ if activated = false{
 		textbox_y = camera_get_view_y(view_camera[0]);
 		//var int = int64(missions_active[level-1]);
 		mission_index = int64(missions_active[level-1]);
-		show_debug_message("Mission Index: "+string(mission_index));
+		//show_debug_message("Mission Index: "+string(mission_index));
 		
 		
 		

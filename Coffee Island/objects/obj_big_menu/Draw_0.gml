@@ -61,9 +61,9 @@ if open == false{
 		
 		
 		//show_debug_message("Level: "+string(level)+" Move: "+string(move));
-		for (a = 0; a<array_length(global.mission); a++){
-		show_debug_message("Mission "+string(a) + ": "+string(global.mission[a])+" Visible: "+string(global.mission_visible[a]));
-		}
+		//for (a = 0; a<array_length(global.mission); a++){
+		//show_debug_message("Mission "+string(a) + ": "+string(global.mission[a])+" Visible: "+string(global.mission_visible[a]));
+		//}
 	}
 	if selection = 2{ 
 		
