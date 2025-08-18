@@ -29,6 +29,36 @@ if open == false{
 		draw_sprite_ext(spr_ui_options, 2, 111.5+textbox_x, 6+textbox_y, .75, .75, 0, c_white, 1);
 		draw_sprite_ext(spr_ui_open2, 0, 270.75+textbox_x, 6+textbox_y, .75, .75, 0, c_white, 1);
 		
+		//Display mode
+		draw_text_transformed(40+textbox_x,40+textbox_y, "Display Mode:",1,1,0);
+		draw_text_transformed(112+textbox_x,40+textbox_y, "Windowed",1,1,0);
+		draw_text_transformed(164+textbox_x,40+textbox_y, "Fullscreen",1,1,0);
+		draw_text_transformed(109.5+textbox_x,44.5+textbox_y, "_________",1,1,0);
+		
+		//Resolution
+		draw_text_transformed(53+textbox_x,70+textbox_y, "Resolution:",1,1,0);
+		draw_text_transformed(112+textbox_x,70+textbox_y, "864 x 648",1,1,0);
+		draw_text_transformed(170+textbox_x,70+textbox_y, "1152 x 864",1,1,0);
+		draw_text_transformed(109.5+textbox_x,74.5+textbox_y, "__________",1,1,0);
+		
+		//Lenguaje
+		draw_text_transformed(55+textbox_x,100+textbox_y, "Lenguage:",1,1,0);
+		draw_text_transformed(112+textbox_x,100+textbox_y, "English",1,1,0);
+		draw_text_transformed(153+textbox_x,100+textbox_y, "Spanish",1,1,0);
+		draw_text_transformed(109.5+textbox_x,104.5+textbox_y, "_______",1,1,0);
+		
+		
+		//SoundFx
+		draw_text_transformed(55.5+textbox_x,130+textbox_y, "Sound Fx:",1,1,0);
+		draw_sprite_ext(spr_ui_volume, global.fx_volume, 110+textbox_x,128.5+textbox_y, .95, .6, 0, c_white, .8);
+		
+		//Music
+		draw_text_transformed(73+textbox_x,160+textbox_y, "Music:",1,1,0);
+		draw_sprite_ext(spr_ui_volume, global.music_volume, 110+textbox_x,158.5+textbox_y, .95, .6, 0, c_white, .8);
+		
+		//Selected Item
+		draw_sprite_ext(spr_ui_selected, 0, x_set+textbox_x,y_set+textbox_y, w_set, h_set, 0, c_white, 1);
+		
 	}
 	if selection = 1{ 
 		
@@ -78,6 +108,9 @@ if open == false{
 		draw_sprite_ext(spr_ui_options, 0, 27.5+textbox_x, 6+textbox_y, .75, .75, 0, c_white, 1);
 		draw_sprite_ext(spr_ui_options, 1, 48.25+textbox_x, 6+textbox_y, .75, .75, 0, c_white, 1);
 		draw_sprite_ext(spr_ui_open2, 0, 270.75+textbox_x, 6+textbox_y, .75, .75, 0, c_white, 1);
+		
+		//Not available at the moment
+		draw_text_transformed(56+textbox_x,102+textbox_y, "The Store is not unlocked yet...",1.3,1.3,0);
 		
 	}
 	

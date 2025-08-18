@@ -3,6 +3,8 @@ function getControls()
 	///Direction inpunts
 	rightKey = keyboard_check(vk_right);
 	leftKey = keyboard_check(vk_left);
+	rightKeyReleased = keyboard_check_released(vk_right);
+	leftKeyReleased = keyboard_check_released(vk_left);
 	downKey = keyboard_check_released(vk_down);
 	upKey = keyboard_check_released(vk_up);
 	
@@ -19,6 +21,10 @@ function getControls()
 	InvKeyD = keyboard_check_released(ord("D"));
 	InvKeyW = keyboard_check_released(ord("W"));
 }
+
+//Volume
+global.fx_volume = 5;
+global.music_volume = 5;
 	
 //Active Mission
 global.mission[0] = false;

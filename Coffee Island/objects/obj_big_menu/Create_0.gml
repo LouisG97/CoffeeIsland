@@ -53,3 +53,11 @@ init = 0;
 show[0] = false;
 missions_active = [];
 mission_index = 0;
+
+//Selected Item Settings
+set_open = 0;
+set_selected = 1;
+x_set = 108;
+y_set = 38;
+w_set = .95;
+h_set = 1.31;

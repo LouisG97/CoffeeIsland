@@ -213,6 +213,7 @@
     {"id":{"name":"spr_ui_open2","path":"sprites/spr_ui_open2/spr_ui_open2.yy",},},
     {"id":{"name":"spr_ui_options","path":"sprites/spr_ui_options/spr_ui_options.yy",},},
     {"id":{"name":"spr_ui_selected","path":"sprites/spr_ui_selected/spr_ui_selected.yy",},},
+    {"id":{"name":"spr_ui_volume","path":"sprites/spr_ui_volume/spr_ui_volume.yy",},},
     {"id":{"name":"spr_ui","path":"sprites/spr_ui/spr_ui.yy",},},
     {"id":{"name":"spr_wall_1","path":"sprites/spr_wall_1/spr_wall_1.yy",},},
     {"id":{"name":"spr_wall_2","path":"sprites/spr_wall_2/spr_wall_2.yy",},},

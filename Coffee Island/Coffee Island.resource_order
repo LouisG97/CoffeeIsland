@@ -170,6 +170,7 @@
     {"name":"spr_ui_open2","order":12,"path":"sprites/spr_ui_open2/spr_ui_open2.yy",},
     {"name":"spr_ui_options","order":14,"path":"sprites/spr_ui_options/spr_ui_options.yy",},
     {"name":"spr_ui_selected","order":15,"path":"sprites/spr_ui_selected/spr_ui_selected.yy",},
+    {"name":"spr_ui_volume","order":18,"path":"sprites/spr_ui_volume/spr_ui_volume.yy",},
     {"name":"spr_ui","order":10,"path":"sprites/spr_ui/spr_ui.yy",},
     {"name":"spr_wall_1","order":3,"path":"sprites/spr_wall_1/spr_wall_1.yy",},
     {"name":"spr_wall_2","order":4,"path":"sprites/spr_wall_2/spr_wall_2.yy",},

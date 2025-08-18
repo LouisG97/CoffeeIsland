@@ -1,5 +1,26 @@
 getControls()
 
+//if selection 2
+//x_set = 161.7;y_set = 38;w_set = 1;h_set = 1.31;
+
+//if selection 3
+//x_set = 108;y_set = 68;w_set = 1.06;h_set = 1.31;
+
+//if selection 4
+//x_set = 166.2;y_set = 68;w_set = 1.1;h_set = 1.31;
+
+//if selection 5
+//x_set = 108;y_set = 98;w_set = .755;h_set = 1.31;
+
+//if selection 6
+//x_set = 150.1;y_set = 98;w_set = .755;h_set = 1.31;
+
+//if selection 7
+//x_set = 108;y_set = 126.6;w_set = 2.28;h_set = 1.31;
+
+//if selection 8
+//x_set = 108;y_set = 156.6;w_set = 2.28;h_set = 1.31;
+
 
 if activated = false{
 	
@@ -212,6 +233,100 @@ if activated = false{
 		}
 	}
 
+	else if selection == 0{
+		
+		if set_open == 0 {
+			set_selected = 1;
+			set_open = 1;
+		}
+		show_debug_message("Estamos en settings");
+		
+		if set_selected == 1 {
+			
+			x_set = 108;y_set = 38;w_set = .95;h_set = 1.31;
+			
+			if downKey{set_selected = 3;}
+			if rightKey{set_selected = 2;}
+			show_debug_message("Settings estado 1");
+			
+		}else if set_selected == 2{
+			
+			x_set = 161.7;y_set = 38;w_set = 1;h_set = 1.31;
+			
+			if downKey{set_selected = 3;}
+			else if leftKey{set_selected = 1;};
+			show_debug_message("Settings estado 2");
+			
+		}else if set_selected == 3{
+			
+			x_set = 108;y_set = 68;w_set = 1.06;h_set = 1.31;
+			
+			if downKey{set_selected = 5;}
+			else if rightKey{set_selected = 4;}
+			else if upKey{set_selected = 1;};
+			show_debug_message("Settings estado 3");
+			
+		}else if set_selected == 4{
+			
+			x_set = 166.2;y_set = 68;w_set = 1.1;h_set = 1.31;
+			
+			if downKey{set_selected = 5;}
+			else if leftKey{set_selected = 3;}
+			else if upKey{set_selected = 1;};
+			
+		}else if set_selected == 5{
+			
+			x_set = 108;y_set = 98;w_set = .755;h_set = 1.31;
+			
+			if downKey{set_selected = 7;}
+			else if rightKey{set_selected = 6;}
+			else if upKey{set_selected = 3;};
+			
+		}else if set_selected == 6{
+			
+			x_set = 150.1;y_set = 98;w_set = .755;h_set = 1.31;
+			
+			if downKey{set_selected = 7;}
+			else if leftKey{set_selected = 5;}
+			else if upKey{set_selected = 3;};
+			
+		}else if set_selected == 7{
+			
+			x_set = 108;y_set = 126.6;w_set = 2.28;h_set = 1.31;
+			
+			if downKey{set_selected = 8;}
+			else if leftKeyReleased{
+			
+				if global.fx_volume > 0 {global.fx_volume --;};
+			
+			}
+			else if rightKeyReleased{
+			
+				if global.fx_volume < 10 {global.fx_volume ++;};
+			
+			}
+			else if upKey{set_selected = 5;};
+			
+		}else if set_selected == 8{
+			
+			x_set = 108;y_set = 156.6;w_set = 2.28;h_set = 1.31;
+			
+			if leftKeyReleased{
+			
+				if global.music_volume > 0 {global.music_volume --;};
+			
+			}
+			else if rightKeyReleased{
+			
+				if global.music_volume < 10 {global.music_volume ++;};
+			
+			}
+			else if upKey{set_selected = 7;};
+			
+		}
+		
+	}
+
 	if MenuKeyPressed{
 	
 		
@@ -223,6 +338,7 @@ if activated = false{
 		obj_options.visible = true;
 		obj_options.activated = true;
 		obj_options.open = false;
+		set_open = 0;
 		
 	
 	}
