@@ -45,7 +45,7 @@
   "origin":7,
   "parent":{
     "name":"Gambril",
-    "path":"folders/Sprites/Gambril.yy",
+    "path":"folders/Sprites/Personajes/Gambril.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

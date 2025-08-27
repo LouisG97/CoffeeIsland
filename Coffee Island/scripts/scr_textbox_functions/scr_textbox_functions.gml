@@ -40,6 +40,10 @@ function scr_text(_text){
 				speaker_sprite	[page_number] = spr_portrait_Gambril;
 				txtb_spr [page_number] = spr_textbox;
 			break;
+			case "liv":
+				speaker_sprite	[page_number] = spr_portrait_Liv;
+				txtb_spr [page_number] = spr_textbox;
+			break;
 			case "cofee_che_4":
 				speaker_sprite	[page_number] = spr_collect_coffee_che_4;
 				txtb_spr [page_number] = spr_textbox;

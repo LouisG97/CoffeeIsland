@@ -1,26 +1,4 @@
-getControls()
-
-//if selection 2
-//x_set = 161.7;y_set = 38;w_set = 1;h_set = 1.31;
-
-//if selection 3
-//x_set = 108;y_set = 68;w_set = 1.06;h_set = 1.31;
-
-//if selection 4
-//x_set = 166.2;y_set = 68;w_set = 1.1;h_set = 1.31;
-
-//if selection 5
-//x_set = 108;y_set = 98;w_set = .755;h_set = 1.31;
-
-//if selection 6
-//x_set = 150.1;y_set = 98;w_set = .755;h_set = 1.31;
-
-//if selection 7
-//x_set = 108;y_set = 126.6;w_set = 2.28;h_set = 1.31;
-
-//if selection 8
-//x_set = 108;y_set = 156.6;w_set = 2.28;h_set = 1.31;
-
+getControls();
 
 if activated = false{
 	
@@ -239,23 +217,43 @@ if activated = false{
 			set_selected = 1;
 			set_open = 1;
 		}
-		show_debug_message("Estamos en settings");
+		//show_debug_message("Estamos en settings");
 		
 		if set_selected == 1 {
 			
 			x_set = 108;y_set = 38;w_set = .95;h_set = 1.31;
 			
-			if downKey{set_selected = 3;}
+			if downKey{
+				if resolution_activated == true{set_selected = 3;}
+				else{set_selected = 5;}
+			}
 			if rightKey{set_selected = 2;}
-			show_debug_message("Settings estado 1");
+			//show_debug_message("Settings estado 1");
+			if acceptKeyReleased2 || acceptKeyReleased{
+				
+				window_set_fullscreen(false);
+				x_window = 0;
+				resolution_activated = true;
+				
+			}
 			
 		}else if set_selected == 2{
 			
 			x_set = 161.7;y_set = 38;w_set = 1;h_set = 1.31;
 			
-			if downKey{set_selected = 3;}
+			if downKey{
+				if resolution_activated == true{set_selected = 3;}
+				else{set_selected = 5;}
+			}
 			else if leftKey{set_selected = 1;};
-			show_debug_message("Settings estado 2");
+			//show_debug_message("Settings estado 2");
+			if acceptKeyReleased2 || acceptKeyReleased{
+				
+				window_set_fullscreen(true);
+				x_window = 54.5;
+				resolution_activated = false;
+				
+			}
 			
 		}else if set_selected == 3{
 			
@@ -264,7 +262,14 @@ if activated = false{
 			if downKey{set_selected = 5;}
 			else if rightKey{set_selected = 4;}
 			else if upKey{set_selected = 1;};
-			show_debug_message("Settings estado 3");
+			//show_debug_message("Settings estado 3");
+			if acceptKeyReleased2 || acceptKeyReleased{
+				
+				window_set_size(864, 648);
+				x_res = 0;
+				window_center();
+				
+			}
 			
 		}else if set_selected == 4{
 			
@@ -273,6 +278,14 @@ if activated = false{
 			if downKey{set_selected = 5;}
 			else if leftKey{set_selected = 3;}
 			else if upKey{set_selected = 1;};
+			if acceptKeyReleased2 || acceptKeyReleased{
+				
+				window_set_size(1152, 864);
+				x_res = 59;
+				window_center();
+				
+			}
+			
 			
 		}else if set_selected == 5{
 			
@@ -280,7 +293,10 @@ if activated = false{
 			
 			if downKey{set_selected = 7;}
 			else if rightKey{set_selected = 6;}
-			else if upKey{set_selected = 3;};
+			else if upKey{
+				if resolution_activated == true{set_selected = 3;}
+				else{set_selected = 1;}
+			}
 			
 		}else if set_selected == 6{
 			
@@ -288,7 +304,15 @@ if activated = false{
 			
 			if downKey{set_selected = 7;}
 			else if leftKey{set_selected = 5;}
-			else if upKey{set_selected = 3;};
+			else if upKey{
+				if resolution_activated == true{set_selected = 3;}
+				else{set_selected = 1;}
+			}
+			if acceptKeyReleased2 || acceptKeyReleased{
+				
+				error_message = true;
+				
+			}
 			
 		}else if set_selected == 7{
 			
@@ -321,7 +345,19 @@ if activated = false{
 				if global.music_volume < 10 {global.music_volume ++;};
 			
 			}
-			else if upKey{set_selected = 7;};
+			else if upKey{set_selected = 7;}
+			else if downKey{set_selected = 9;};
+			
+		}else if set_selected == 9{
+			
+			x_set = 105.5;y_set = 180;w_set = 1.5;h_set = 1.25;
+			
+			if upKey{set_selected = 8;};
+			if acceptKeyReleased2 || acceptKeyReleased{
+				
+				game_end();
+				
+			}
 			
 		}
 		
@@ -377,6 +413,35 @@ if activated = false{
 		}
 	
 	}
+	
+}
+
+
+
+if error_message == true{
+	
+	t_mill --;
+	
+	if t_mill == 135{ txt_op = .9; }
+	else if t_mill == 120{ txt_op = .8; }
+	else if t_mill == 105{ txt_op = .7; }
+	else if t_mill == 90{ txt_op = .6; }
+	else if t_mill == 75{ txt_op = .5; }
+	else if t_mill == 60{ txt_op = .4; }
+	else if t_mill == 45{ txt_op = .3; }
+	else if t_mill == 30{ txt_op = .2; }
+	else if t_mill == 15{ txt_op = .1; }
+	else if t_mill == 0{ txt_op = 0; }
+	
+	
+	if txt_op == 0 {
+	
+		error_message = false;
+		t_mill = 180;
+		txt_op = 1;
+	
+	}
+	
 	
 }
 

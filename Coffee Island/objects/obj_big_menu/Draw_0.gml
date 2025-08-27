@@ -33,19 +33,40 @@ if open == false{
 		draw_text_transformed(40+textbox_x,40+textbox_y, "Display Mode:",1,1,0);
 		draw_text_transformed(112+textbox_x,40+textbox_y, "Windowed",1,1,0);
 		draw_text_transformed(164+textbox_x,40+textbox_y, "Fullscreen",1,1,0);
-		draw_text_transformed(109.5+textbox_x,44.5+textbox_y, "_________",1,1,0);
+		draw_text_transformed(109.5+textbox_x+x_window,44.5+textbox_y, "_________",1,1,0);
 		
 		//Resolution
-		draw_text_transformed(53+textbox_x,70+textbox_y, "Resolution:",1,1,0);
-		draw_text_transformed(112+textbox_x,70+textbox_y, "864 x 648",1,1,0);
-		draw_text_transformed(170+textbox_x,70+textbox_y, "1152 x 864",1,1,0);
-		draw_text_transformed(109.5+textbox_x,74.5+textbox_y, "__________",1,1,0);
+		if resolution_activated == true {
+			draw_text_transformed(53+textbox_x,70+textbox_y, "Resolution:",1,1,0);
+			draw_text_transformed(112+textbox_x,70+textbox_y, "864 x 648",1,1,0);
+			draw_text_transformed(170+textbox_x,70+textbox_y, "1152 x 864",1,1,0);
+			draw_text_transformed(109.5+textbox_x+x_res,74.5+textbox_y, "__________",1,1,0);
+		}else{
+			draw_set_color(c_gray);
+			draw_text_transformed(53+textbox_x,70+textbox_y, "Resolution:",1,1,0);
+			draw_text_transformed(112+textbox_x,70+textbox_y, "864 x 648",1,1,0);
+			draw_text_transformed(170+textbox_x,70+textbox_y, "1152 x 864",1,1,0);
+			draw_set_color(c_white);
+		}
 		
 		//Lenguaje
 		draw_text_transformed(55+textbox_x,100+textbox_y, "Lenguage:",1,1,0);
 		draw_text_transformed(112+textbox_x,100+textbox_y, "English",1,1,0);
 		draw_text_transformed(153+textbox_x,100+textbox_y, "Spanish",1,1,0);
 		draw_text_transformed(109.5+textbox_x,104.5+textbox_y, "_______",1,1,0);
+		
+		//Exit the game
+		draw_text_transformed(110.5+textbox_x,183+textbox_y, "Exit to desktop",1,1,0);
+		
+		
+		if error_message == true{
+			
+			draw_sprite_ext(spr_textbox, 0, 79.5+textbox_x, 94+textbox_y, 8, 1.2, 0, c_white,txt_op); 
+			draw_set_alpha(txt_op);
+			draw_text_transformed(88.5+textbox_x,99+textbox_y, "Spanish not available yet.",1,1,0);
+			draw_set_alpha(1);
+			
+		}
 		
 		
 		//SoundFx

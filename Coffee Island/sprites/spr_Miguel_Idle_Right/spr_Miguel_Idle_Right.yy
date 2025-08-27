@@ -41,7 +41,7 @@
   "origin":7,
   "parent":{
     "name":"Day",
-    "path":"folders/Sprites/Miguel/Day.yy",
+    "path":"folders/Sprites/Personajes/Miguel/Day.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

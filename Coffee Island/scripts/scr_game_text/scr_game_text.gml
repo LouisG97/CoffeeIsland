@@ -334,6 +334,13 @@ function scr_game_text_eng(_text_id){
 		
 	///FIRST SCENARIO
 	
+		case "liv-init":
+		
+			scr_text("Oh, you must be the new barista from Gambril's coffee shop, isn't it?", "liv", -1);
+			scr_text("My name is Liv, nice tu meet you...", "liv", -1);
+		
+		break;
+	
 		case "gambril-init":
 		
 			if global.gambril == 0 {
